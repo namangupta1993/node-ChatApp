@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-web-app2",
+  "version": "0.0.0",
+  "description": "NodejsWebApp2",
+  "main": "server.js",
+  "author": {
+    "name": "viking"
+  },
+  "dependencies": {
+    "deparam": "^1.0.5",
+    "expect": "^23.2.0",
+    "express": "^4.16.3",
+    "geolocation": "^0.2.0",
+    "google-geolocation": "^1.0.2",
+    "google-panorama-by-location": "^4.1.1",
+    "hbs": "^4.0.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "path": "^0.12.7",
+    "socket.io": "^2.1.1"
+  }
+}

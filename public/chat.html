@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chat | ChatApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <style>
+
+    @keyframes leftAnimation {
+    0%   {left:-50px; top:0px;}
+    100% {left:10px; top:0px;}
+
+    }
+
+        @keyframes rightAnimation {
+    0%   { right:80px; top:0px;}
+    100%{right:0px;top:0px;}
+    }
+
+
+
+    </style>
+
+</head>
+<body class="chat">
+    <div class="chat__sidebar">
+        <h3>People</h3>
+        <div id="users" style="font-size:large;color:forestgreen;text-align:center">
+
+            
+
+        </div>
+    </div>
+    <div class="chat__main">
+        <div id="messages" class="chat__messages"> </div>
+
+        <div class="chat__footer">
+            <form id="message-form">
+                <input name="message" type="text"  placeholder="Message" autofocus autocomplete="off" />
+                <button>Send</button>
+            </form>
+            <button id="send-location">Send location</button>
+        </div>
+    </div>
+    <script id="message-template_left" type="text/template">
+        <div class="message_left">
+            <div class="message__title">
+                <h4>{{from}}</h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message__body">
+                <p>{{text}}</p>
+            </div>
+        </div>
+
+    </script>
+
+    <script id="message-template_admin" type="text/template">
+        <div class="message_admin">
+            <div class="message__title">
+                <h4>{{from}}</h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message__body">
+                <p>{{text}}</p>
+            </div>
+        </div>
+
+    </script>
+
+
+
+    <script id="message-template_right" type="text/template">
+        <div class="message_right">
+            <div class="message__title">
+                <h4>{{from}}</h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message__body">
+                <p>{{text}}</p>
+            </div>
+        </div>
+    </script>
+
+
+    <script id="location-message-template-left" type="text/template">
+        <li class="location_message_left">
+            <div class="message__title">
+                <h4>{{from}}</h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message__body">
+                <p>
+                    <a href="{{url}}" target="_blank">My current location</a>
+                </p>
+            </div>
+        </li>
+
+    </script>
+
+    <script id="location-message-template-right" type="text/template">
+        <li class="location_message_right">
+            <div class="message__title">
+                <h4>{{from}}</h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message__body">
+                <p>
+                    <a href="{{url}}" target="_blank">My current location</a>
+                </p>
+            </div>
+        </li>
+
+    </script>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/libs/jquery-3.1.0.min.js"></script>
+    <script src="/js/libs/moment.js"></script>
+    <script src="/js/libs/mustache.js"></script>
+    <script src="/js/libs/deparam.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>
