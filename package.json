@@ -6,7 +6,8 @@
   "author": {
     "name": "viking"
   },
-  "dependencies": {
+  "engines": {"node": "10.3.0"}
+  ,"dependencies": {
     "deparam": "^1.0.5",
     "expect": "^23.2.0",
     "express": "^4.16.3",
