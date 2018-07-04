@@ -6,7 +6,8 @@
   "author": {
     "name": "viking"
   },
-  "engines": {"node": "10.3.0"}
+  "scripts": {"start": "node Server/server.js"}
+  ,"engines": {"node": "10.3.0"}
   ,"dependencies": {
     "deparam": "^1.0.5",
     "expect": "^23.2.0",
