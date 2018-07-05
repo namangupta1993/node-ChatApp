@@ -101,7 +101,11 @@
         var user = this.users.filter((item) => {
             return item.id === iD;
         })
-        return user[0];
+
+        if (user.length > 0)
+            return user[0];
+        else
+            return false;
     }
 
     removeUser(id) {

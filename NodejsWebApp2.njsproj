@@ -56,6 +56,9 @@
     <Content Include="public\chat.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\error.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\index.hbs">
       <SubType>Code</SubType>
     </Content>

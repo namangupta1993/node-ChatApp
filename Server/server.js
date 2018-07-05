@@ -45,7 +45,13 @@ io.on('connection', (socket) => {
         socket.broadcast.to(params.room).emit('newMessageAdmin', messageSend);
 
         if (!users.addUser(socket.id, params.name, params.room)) {
-            socket.emit('error_duplicateUser', (params))
+            socket.emit('error_duplicateUser', (params), function (socketId) {
+
+                console.log(`duplicate user prevented with socket: ${socketId}`);
+
+                
+
+            })
         }
         else {
             var roomUsers = users.getUsers(params.room);
@@ -100,20 +106,25 @@ io.on('connection', (socket) => {
 
         console.log('inside disconnect')
 
-        var removedUser = users.getUserbyID(socket.id);
-        var roomInfo = removedUser.room;
-        users.removeUser(socket.id);
-        var roomUsers = users.getUsers(roomInfo);
+        if (socket.id) {
 
-        io.to(roomInfo).emit('updateUserList', roomUsers)
+            var removedUser = users.getUserbyID(socket.id);
 
-        var message = messageGenerator('', `${removedUser.name} has left the room`)
+            if (removedUser) {
+                var roomInfo = removedUser.room;
+                users.removeUser(socket.id);
+                var roomUsers = users.getUsers(roomInfo);
 
-        io.to(roomInfo).emit('newMessageAdmin', message);
+                io.to(roomInfo).emit('updateUserList', roomUsers)
+
+                var message = messageGenerator('', `${removedUser.name} has left the room`)
+
+                io.to(roomInfo).emit('newMessageAdmin', message);
+            }
+        }
 
 
-        
-    });
+        });
 
 });
 

@@ -135,10 +135,12 @@ locationButton.on('click', function () {
 });
 
 
-socket.on('error_duplicateUser', (param) => {
+socket.on('error_duplicateUser', (param,callback) => {
 
     alert(`${param.name} is already logged in for room ${param.room}`);
-    window.location.replace('../index.html');
+    window.location.replace('../error.html');
+    
+    callback(socket.id);
 
 });
 
