@@ -48,11 +48,14 @@
     <Content Include="package.json" />
     <Content Include="public\css\bcg.png" />
     <Content Include="public\css\friends.jpeg" />
+    <Content Include="public\css\location_alt_button.png" />
+    <Content Include="public\css\location_button.png" />
+    <Content Include="public\css\send_message_icon.png" />
+    <Content Include="public\css\sidebar_gradient.jpg" />
     <Content Include="public\css\styles.css" />
     <Content Include="public\chat.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="public\css\wood_gradient.jpg" />
     <Content Include="public\index.hbs">
       <SubType>Code</SubType>
     </Content>

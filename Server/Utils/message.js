@@ -1,12 +1,18 @@
-﻿var moment = require('../../public/js/libs/moment');
+﻿var moment = require('moment-timezone');
+
+
+
 
 var generateMessage = (from, text) => {
 
     return {
         from
         , text
-        , createdAt: moment().format('h:mm a')
+        , createdAt: moment().utcOffset("+05:30").format('h:mm a')
     }
 }
+
+
+
 
 module.exports = generateMessage

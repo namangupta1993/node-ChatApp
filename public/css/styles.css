@@ -27,20 +27,27 @@ h3 {
     font-size: 1.5rem
 }
 
-button {
+.button-normal {
     background: #26610E;
     cursor: pointer;
     transition: background .3s ease
 }
 
-    button:hover {
-        background:#ffd800
+    .button-normal:hover {
+        background: #ffd800
     }
 
-    button:disabled {
+    .button-normal:disabled {
         cursor: default;
         background: #698ea5
     }
+
+
+.message_button_send {
+    background-image: url('send_message_icon.png') !important;
+    background-color:none !important;
+    background:none!important;
+}
 
 .centered-form {
     display: flex;
@@ -101,7 +108,7 @@ button {
     overflow-y: scroll;
     width: 400px;
     height: 100vh;
-    background-image:url('wood_gradient.jpg');
+    background-image: url('sidebar_gradient.jpg');
 }
 
     .chat__footer, .chat__sidebar li {
@@ -133,7 +140,7 @@ button {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     padding: 10px;
-    background-color:aliceblue;
+    background-color: aliceblue;
 }
 
 .chat__footer {
@@ -166,13 +173,14 @@ button {
     /*animation stuff*/
     clear: both;
     margin-top: 10px;
-    background-color: beige;
+    background-color: antiquewhite;
     float: left;
     max-width: 250px;
     word-wrap: break-word;
     margin-bottom: 10px;
     /*editing ends*/
     padding: 20px;
+    border-radius: 10px 20px;
 }
 
 .message_admin {
@@ -182,17 +190,17 @@ button {
     text-align: center;
     margin-left: 30%;
     margin-top: 10px;
-    background-color: lightblue;
+    background-color: #e3f2f4;
     border: thin;
     border-color: ghostwhite;
     max-width: 580px;
-    font-style: normal;
+    font-style: oblique;
     font-family: 'Bookman Old Style';
     word-wrap: break-word;
     margin-bottom: 10px;
-    /*editing ends*/
+    border-radius: 40px 40px 40px 40px;
     padding: 20px;
-    /*-webkit-animation-name: leftAnimation; /* Safari 4.0 - 8.0 */
+    max-height: 63px; /*-webkit-animation-name: leftAnimation; /* Safari 4.0 - 8.0 */
     /*-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     /*animation-name: leftAnimation;
     animation-duration: 2s;*/ /*/
@@ -211,7 +219,7 @@ button {
     animation-duration: 2s;
     /*animation stuff*/
     clear: both;
-    background-color: lightgreen;
+    background-color: #bef4c1;
     float: right;
     margin-top: 10px;
     max-width: 250px;
@@ -219,7 +227,8 @@ button {
     /*editing ends*/
     padding: 10px;
     margin-bottom: 10px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    border-radius: 20px 10px
 }
 
 .location_message_left {
@@ -230,7 +239,7 @@ button {
     animation-duration: 2s;
     /*animation stuff*/
     clear: both;
-    background-color: beige;
+    background-color: antiquewhite;
     float: left;
     margin-top: 10px;
     max-width: 250px;
@@ -238,7 +247,8 @@ button {
     /*editing ends*/
     padding: 10px;
     margin-bottom: 10px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    border-radius: 20px 10px
 }
 
 
@@ -258,7 +268,8 @@ button {
     /*editing ends*/
     padding: 10px;
     margin-bottom: 10px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    border-radius: 20px 10px
 }
 
 
